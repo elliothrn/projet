@@ -1,5 +1,10 @@
 language: ruby
 rvm:
 - 2.4.4
-
-
+deploy:
+  provider: heroku
+  api_key:
+    secure: kulK9Ts2fsrQwiSgCwwCJ680PdNGGKziSCw/m2uJJQMbVN6/GCE/S+M440C2fEoIQSgN0PBq8l51HrOaQR3zwctxzv64bgCsstPW9iQvCl41nk2S9ufZOH8PyfZjBU/vCt3jtwMepND3arsuUcibB2veTfHE6Y0ej6yHE8C14zMaZaqp/qQeIpzPpoUrJG5fwqDrzJkvX/9y4VVEvWhwApxPEMscHSUl4TzrchN1pS1693cYnH0W4HDTyaCnolTvz6+Vo0knf/ZXRjN5eYTsfRS2mFjMJuVNW+Z0oJiTKIRT4CVPJ+cnpMKgCkVuXP9n3FutxXqNhHmO4eoaO5MW3UlZcegbnHdDSPq9PmafvKIb7sgNE88NmZkQbXUOrxKZlehcYVXqCuw96Lp+pbHlbRN4P4qPlT42E1fW9dZn8SU5TS+MQw0ex4IVt8rmnYS080ru31vzU9QJNojTXLFLwLBJ+gzoudUVZl/FGi3v9hDIQ5ccrRi4Aq4OIeNZcOhwPPRCIo/pUHYeZc9mfuEtlHnm8UbD3TkShk17WZ7jAIKkdaS/D3s+DWYHAaPE9TeayHLE/0QSU7baarLzTnAkdTEnPtjhR51qyhvF3iH/TN6gsf5XAbl7ARy7xUkSEclce/u1cZ+HeD1LLABqHjER2FGLwJRFFdSbKZqA/AHK2wY=
+  app: projet
+  on:
+    repo: elliothrn/projet
