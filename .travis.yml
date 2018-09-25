@@ -3,7 +3,7 @@ rvm:
 - 2.4.4
 deploy:
   provider: heroku
-  api_key: aac7b718-6eed-4883-8cc7-c7a3ebe0cce8
+  api_key: 
     secure: kYYApZ67AN8Cl9alqtU05HHL7MeS8AqpmQAXd/2gv4Q7bh2jl5FpBhox3R4G5lU3NyaEyXbeq0C7hy2NERoFwbMc9ooaYSw+uOC6LCEEUw4oHY4pjtRzeQd/TCMawxF9hZXlvfvhFZbSIbU7hHsSZIg1QrZQirIn7Hz3BZ6j1258RqKQfZ+ooNKMIQ5XSjllGEYgW+KUMP48EesCUVk5sNWxKsYMYKsXd636WrVQYDTleSbPepL5AglspNTxWYXDt+PZwiWQ81y1NrRyBRBvoGzDuC6uuxc2Rqlc8DdmZcEhuzfCDteI9VvsiCbS6QlnDAY/sfsoUPgdNlTGlj0mPOuYnr++5c8DFGfUflwoEJ9XY2K6aD2t7x0btjJoR6STeVPK8Dff/EVWW2MvrUGDaXyscNfRyHaNsKLbpEhZRpHaoCTLc8K4bRsqZRZUrs6uW0pgUxjZSa3C8KxcAd0pzmdzf7FjdvnHlKW+8Z8GSJWlDRWQPVugK3s7YhD77x/qqhIfkKRbbp/E0gb+RKJnkf043oqgKmQALbGzncqClqJqQapJ8JPH5MfZkU5BwcwYCpZEZj6oPN9NDMyS03/2/abYdJ5/HcvjN8WjwDdEUFZ6HLnL+u4fniXskxgzhEGNU4MRrpTQA0L4fR+FclefCGyqryE+v786RMKvGH61Jdg=
   app: pizzaelliot
   on:
