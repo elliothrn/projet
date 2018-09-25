@@ -1,11 +1,25 @@
 language: ruby
+
 rvm:
 - 2.4.4
 deploy:
-  run: rails db:migrate
+  run:  "rails db:migrate"
   provider: heroku
   api_key:
-    secure: RP478RGNG89bJcv9qVq5pNzLRAhvGsJbxaVzc996Ae40DpcPvXNRkF3pyevCfPyiI1xlCvAqO8ms57Oq9flVhJyKGKf0kOxTe9gCxp2AzUyNREeab/8aZpoTVRXVDOZ2ZRRjdkbO+R07QeAVZ6G+Rws0CdDSRfcQKzel+dzQFv0sVwsJSYVokzvwMMyhSF/pRvs2ucYUOsSeVJXbI7lAIx8VDJXAs07zstGsL66SieqKKvoVOX/hIGH8cXyg+BEPtf4GGNYCMymfVTzPILCTvZreJM77tV1jz9+7ekD4JvcTWFw3NlAgAga3XpN2R5c7YnAGS7onzP/SaprSz049p1Hqq54qzR2dxXufe24cOdlZJYaC/5vvW+n62N4b8hG5J5EGeDcga7bOJUajB12bctauCxiGy9UdQjjAc2vfn2UiiPhOsNUYTEsIkz1WQdcmQDtZ2WqjImWf+PmMLIWuAMfTWBwHKHS146DOcir59y3gTHy4WxJGD/G167gUdfUimvrVXJixO0ZwgV2KDA6Txgn0MVR44ZIZ1R+PJUairBqC7feoyTd9LOLiM8MAU71uKJtinOvTyNlXv5ThlLktYzvfngvmvIx/981UYEzBsQn7XwTeLJwZ79DkojUs/kvseY6N9A9j3WJrJfIPOsR+nQG86kLfUW3rRzcJDqUAtpI=
+    secure: REcOlBvxnuBpCdsOtOZhonVEHikwJ59YamPjUc7ogQg2PipjSskoplc/0Nb4d1skxs/LCrsmpmcfyICxyqSsFJ2C8A+NRMn3kfRsI2qMpvx7KuPvtVRh18sge4OijJ41Euf3gHC+8lDwxPv6rp6xwWE8LaFgKtJyoMPQuVzVCgDMY3kGVDWIrsSwBMRnPBpI3UvG/Z2c8FSLRetcJfR72g0BsDyuksyGnmAn/mjKsfA1SdpS4PQOTrbz/aAlS7xbDSgOlA8/VZwWmyW3PFhJu2ony9Eoh/LTDykMVfxySdPxvnI9qMV51G9f9Kz4LAZz+8D4Kx5OHftXNVjtFiv/Ymx43owfqEx1XkPjWvR0YPCDqEYvhOJGjzWm8jkIu2VwPSBvPjN2te8S94Qsv9wXBFykAkla/w6XFh1EFFZjPfcw4Iqm84g1rHMJlvYj11ElfXdMULDtYBeCHbAU+DkzLenuIsKk4j/zncJReOoxXl6+ElR5cndDe1Ra+iz7VofhO3BBBKxbMEPMKPRpBet4hnBIjKWI6ypbp2uAVgJxuiLnpIfu9OHmnTNvSFU7rtG/3yeMBkRs7CvN+uBlNX4VNvR+tMFBDTLsIJAGVzBW0q1dZv8hw2m8GtuTyXK8KTZqpwkLZP29iNmAb/gdiytf4GsCNhXbRh345R9lnPKmlk4=
   app: pizzaelliot
   on:
     repo: elliothrn/projet
+env:
+  global:
+    - CC_TEST_REPORTER_ID=57bbf93cc4580897e7cb627a2e54538368a9354c4d6bac1b67a9d7333b16f67a
+language: ruby
+rvm:
+  - 2.2.0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
