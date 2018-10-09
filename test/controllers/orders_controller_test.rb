@@ -19,7 +19,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     pizza = Pizza.new(name: 'test')
     pizza.save()
     assert_difference('Order.count') do
-      post orders_url, params: { order: { name: "test", adress: "here is my adress"}, pizzas:[pizzas.id, pizzas.id] }
+      post orders_url, params: { order: { name: "test", adress: "here is my adress"}, pizzas:[pizza.id, pizza.id] }
     end
 
     assert_redirected_to order_url(Order.last)

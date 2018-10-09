@@ -26,8 +26,8 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-    params.fetch(:pizzas).each do | pizza |
-      @order.pizzas << Pizza.find(pizza)
+    params.fetch(:pizza).each do | pizza |
+      @order.pizza << Pizza.find(pizza)
     end
     
     respond_to do |format|
